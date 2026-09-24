@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Indikator Badge Pertemuan yang Lebih Aman & Modern -->
+        <!-- Indikator Badge Pertemuan -->
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,9 +59,62 @@
             android:textColor="#64748B"
             android:textSize="15sp"
             android:layout_marginTop="6dp"
-            android:layout_marginBottom="48dp" />
+            android:layout_marginBottom="24dp" />
 
-        <!-- Tombol Kembali Modern -->
+        <!-- MaterialCardView dengan ConstraintLayout di dalamnya -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#CBD5E1"
+            android:backgroundTint="#FFFFFF">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tombol 1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tombol Show Snackbar -->
+        <Button
+            android:id="@+id/btnShowSnackbar"
+            android:layout_width="200dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="12dp"
+            android:text="Show Snackbar"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Tombol Show Alert Dialog -->
+        <Button
+            android:id="@+id/btnShowAlertDialog"
+            android:layout_width="200dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="12dp"
+            android:text="Show Alert Dialog"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Tombol Kembali -->
         <Button
             android:id="@+id/btnKembali"
             android:layout_width="200dp"
