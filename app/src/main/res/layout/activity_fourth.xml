@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    tools:context=".pertemuan_4.FourthActivity">
+
+    <!-- Container Utama Terpusat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Indikator Badge Pertemuan yang Lebih Aman & Modern -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#E2E8F0"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:text="MODUL KULIAH"
+                android:textColor="#64748B"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Judul Halaman Utama -->
+        <TextView
+            android:id="@+id/tvFourthTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fourth Activity"
+            android:textColor="#1E293B"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Sub-judul / Keterangan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Materi Pembelajaran Pertemuan 4"
+            android:textColor="#64748B"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="48dp" />
+
+        <!-- Tombol Kembali Modern -->
+        <Button
+            android:id="@+id/btnKembali"
+            android:layout_width="200dp"
+            android:layout_height="54dp"
+            android:text="Kembali"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

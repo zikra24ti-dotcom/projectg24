@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">zikra</string>
+    <string name="title_verification">Verifikasi Login</string>
+    <string name="btn_send">Kirim</string>
+    <string name="hint_phone_number">0852288894493</string>
+    <string name="description_phone_icon">Ikon telepon untuk verifikasi</string>
+</resources>
