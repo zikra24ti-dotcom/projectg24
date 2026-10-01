@@ -3,8 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dark_blue">#2C3E50</color>
-    <color name="primary">#FFBB00</color>
-    <color name="primary_variant">#E6A800</color>
-    <color name="secondary">#FF0606</color>
+    <color name="primary">#059669</color> <!-- Emerald 600 (Green) -->
+    <color name="primary_variant">#047857</color> <!-- Emerald 700 -->
+    <color name="secondary">#14B8A6</color> <!-- Teal 500 -->
+    <color name="background_light">#F8FAFC</color> <!-- Slate 50 -->
+    <color name="surface_light">#FFFFFF</color>
+    <color name="text_primary">#0F172A</color> <!-- Slate 900 -->
+    <color name="text_secondary">#64748B</color> <!-- Slate 500 -->
     <color name="gray">#808080</color>
 </resources>

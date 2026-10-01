@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.zikra.MainActivity
+import com.example.zikra.Pertemuan_5.fifthActivity
 import com.example.zikra.databinding.ActivityFourthBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -59,6 +60,11 @@ class FourthActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        binding.button4.setOnClickListener {
+            val intent = Intent(this, fifthActivity::class.java)
+            startActivity(intent)
         }
     }
 
