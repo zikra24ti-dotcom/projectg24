@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">HPAI APK</string>
+
+    <!-- Bottom Navigation Titles -->
+    <string name="title_home">Beranda</string>
+    <string name="title_catalog">Katalog</string>
+    <string name="title_edu">Edukasi</string>
+    <string name="title_orders">Pesanan</string>
+    <string name="title_profile">Profil</string>
+
+    <!-- Home Fragment Strings -->
+    <string name="greeting_welcome">Selamat Datang</string>
+    <string name="greeting_assalamu_alaikum">Assalamu\'alaikum,</string>
+    <string name="promo_title">PROMO HPAI</string>
+    <string name="promo_description">Diskon 20% Produk Herbal Sunnah &amp; Madu</string>
+    <string name="promo_voucher">Gunakan kode voucher: HERBALALAMI</string>
+    <string name="section_categories">Kategori Utama</string>
+    <string name="section_popular">Produk Populer HPAI</string>
+    <string name="cat_madu">Madu &amp; Extra</string>
+    <string name="cat_herbal">Herbal Sunnah</string>
+    <string name="cat_tea">Teh &amp; Kopi</string>
+    <string name="cat_care">Perawatan</string>
+
+    <!-- Catalog Fragment Strings -->
+    <string name="catalog_header">Katalog Produk HPAI</string>
+    <string name="btn_buy">Beli</string>
+
+    <!-- Edu Fragment Strings -->
+    <string name="edu_header">Edukasi Kesehatan Herbal</string>
+
+    <!-- Orders Fragment Strings -->
+    <string name="orders_header">Riwayat Pesanan Herbal</string>
+
+    <!-- Profile Fragment Strings -->
+    <string name="profile_developer_info">INFORMASI DEVELOPER</string>
+    <string name="profile_btn_logout">Keluar / Logout</string>
+</resources>
