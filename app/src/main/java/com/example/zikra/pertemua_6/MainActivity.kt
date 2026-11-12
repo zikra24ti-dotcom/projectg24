@@ -1,4 +1,4 @@
-package com.example.zikra
+package com.example.zikra.pertemua_6
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.zikra.R
 import com.example.zikra.pertemuan_4.FourthActivity
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
+            startActivity(intent)
+        }
+
+        val btnToElevan = findViewById<Button>(R.id.btnToElevan)
+        btnToElevan?.setOnClickListener {
+            val intent = Intent(this, com.example.zikra.pertemuan_11.elevan::class.java)
             startActivity(intent)
         }
     }
