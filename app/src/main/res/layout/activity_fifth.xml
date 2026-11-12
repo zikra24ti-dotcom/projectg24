@@ -41,7 +41,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:text="Buka WebView"
-                app:icon="@drawable/ic_link"
                 app:iconGravity="textStart" />
 
             <TextView
