@@ -6,117 +6,170 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8FAFC"
+    android:background="#060C0A"
     tools:context=".pertemua_6.MainActivity">
 
-    <!-- Container Utama Terpusat -->
+    <!-- Top Header Container -->
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:id="@+id/headerLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Label Input -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_launcher_foreground"
+            app:tint="#10B981"
+            android:contentDescription="Logo"
+            android:layout_marginBottom="4dp" />
+
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Alamat Email"
-            android:textColor="#334155"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:text="User Activity Hub"
+            android:textColor="#D4AF37"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="4dp" />
 
-        <!-- Input Email Modern dengan Hint -->
-        <EditText
-            android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginBottom="24dp"
-            android:background="@android:drawable/edit_text"
-            android:hint="masukkanemail@domain.com"
-            android:inputType="textEmailAddress"
-            android:paddingHorizontal="16dp"
-            android:textColor="#1E293B"
-            android:textColorHint="#94A3B8"
-            android:textSize="15sp" />
-
-        <!-- Tombol Aksi Utama -->
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginBottom="32dp"
-            android:text="Kirim Data"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <!-- Garis Pemisah (Divider Layout) -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#CBD5E1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Navigasi Tugas "
-                android:textColor="#94A3B8"
-                android:textSize="12sp" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="#CBD5E1" />
-        </LinearLayout>
-
-        <!-- Tombol Navigasi ke Pertemuan Lain -->
-        <Button
-            android:id="@+id/btnToFourth"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="Buka Pertemuan 4"
-            android:textAllCaps="false"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/btnToElevan"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginTop="12dp"
-            android:text="Buka Pertemuan 11 (TabLayout &amp; Onboard)"
-            android:textAllCaps="false"
-            android:textSize="15sp" />
+            android:text="Aktivitas Pengguna"
+            android:textColor="#34D399"
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
+    <!-- Main Card Container -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="im not robot"
+        android:layout_marginHorizontal="24dp"
+        app:cardBackgroundColor="#13221C"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#3A5A4E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintVertical_bias="0.35">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Label Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Alamat Email"
+                android:textColor="#A3B8CC"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Input Email dengan Background kustom -->
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_dark_input"
+                android:drawableStart="@drawable/ic_link"
+                android:drawablePadding="12dp"
+                android:hint="masukkanemail@domain.com"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#64748B"
+                android:textSize="15sp"
+                app:drawableTint="#10B981" />
+
+            <!-- Tombol Aksi Utama (Kirim Data) -->
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_dark_button"
+                android:text="Kirim Data"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Garis Pemisah (Divider) dengan teks Navigasi Tugas -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#3A5A4E" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:text="Navigasi Tugas"
+                    android:textColor="#94A3B8"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#3A5A4E" />
+            </LinearLayout>
+
+            <!-- Tombol Navigasi ke Pertemuan -->
+            <Button
+                android:id="@+id/btnToFourth"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/bg_outlined_button"
+                android:drawableStart="@drawable/ic_home"
+                android:drawablePadding="12dp"
+                android:paddingHorizontal="16dp"
+                android:text="Buka Sesi Pertemuan"
+                android:textAllCaps="false"
+                android:textColor="#34D399"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:drawableTint="#34D399" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_dark_button"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

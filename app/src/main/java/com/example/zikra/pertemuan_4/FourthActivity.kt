@@ -3,13 +3,19 @@ package com.example.zikra.pertemuan_4
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.zikra.pertemua_6.MainActivity
 import com.example.zikra.Pertemuan_5.fifthActivity
 import com.example.zikra.databinding.ActivityFourthBinding
+import com.example.zikra.pertemua_6.AuthActivity
+import com.example.zikra.pertemuan_11.elevan
+import com.example.zikra.pertemuan_2.SecondActivity
+import com.example.zikra.pertemuan_3.ThirdActivity
+import com.example.zikra.pertemuan_9.NinthActivity
+import com.example.zikra.pertemuan_10.Pertemuan10Activity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
@@ -32,6 +38,17 @@ class FourthActivity : AppCompatActivity() {
         val from = intent.getStringExtra("from")
         val age = intent.getIntExtra("age", 0)
         Log.e("Data Intent", "Nama: $name , Usia: $age, Asal: $from")
+
+        binding.btnKirimData.setOnClickListener {
+            val email = binding.etEmail.text.toString().trim()
+            val isNotRobot = binding.cbNotRobot.isChecked
+            if (email.isEmpty()) {
+                binding.etEmail.error = "Email harus diisi"
+                Toast.makeText(this, "Silakan masukkan alamat email", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Data dikirim: $email (Robot Check: $isNotRobot)", Toast.LENGTH_LONG).show()
+            }
+        }
 
         binding.btnShowSnackbar.setOnClickListener {
             Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
@@ -56,14 +73,58 @@ class FourthActivity : AppCompatActivity() {
                 .show()
         }
 
-        binding.btnKembali.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+        binding.btn1.setOnClickListener {
+            Toast.makeText(this, "Tombol 1 dalam Card diklik", Toast.LENGTH_SHORT).show()
         }
 
-        binding.button4.setOnClickListener {
+        binding.btnPertemuan1.setOnClickListener {
+            Toast.makeText(this, "Buka Pertemuan 1", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnPertemuan2.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan3.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan4.setOnClickListener {
+            Toast.makeText(this, "Anda sedang di Pertemuan 4", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnPertemuan5.setOnClickListener {
             val intent = Intent(this, fifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan6.setOnClickListener {
+            val intent = Intent(this, AuthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan7.setOnClickListener {
+            Toast.makeText(this, "Buka Pertemuan 7", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnPertemuan8.setOnClickListener {
+            Toast.makeText(this, "Buka Pertemuan 8", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnPertemuan9.setOnClickListener {
+            val intent = Intent(this, NinthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan10.setOnClickListener {
+            val intent = Intent(this, Pertemuan10Activity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan11.setOnClickListener {
+            val intent = Intent(this, elevan::class.java)
             startActivity(intent)
         }
     }

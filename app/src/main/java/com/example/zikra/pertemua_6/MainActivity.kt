@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -32,10 +33,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnToElevan = findViewById<Button>(R.id.btnToElevan)
-        btnToElevan?.setOnClickListener {
-            val intent = Intent(this, com.example.zikra.pertemuan_11.elevan::class.java)
-            startActivity(intent)
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
+        btnLogout?.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Konfirmasi Logout")
+                .setMessage("Apakah Anda yakin ingin keluar?")
+                .setPositiveButton("Ya") { _, _ ->
+                    val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Tidak", null)
+                .show()
         }
     }
 
