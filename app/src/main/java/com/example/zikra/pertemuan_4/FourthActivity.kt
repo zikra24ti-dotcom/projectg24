@@ -12,6 +12,7 @@ import com.example.zikra.Pertemuan_5.fifthActivity
 import com.example.zikra.databinding.ActivityFourthBinding
 import com.example.zikra.pertemua_6.AuthActivity
 import com.example.zikra.pertemuan_11.elevan
+import com.example.zikra.pertemuan_12.Pertemuan12Activity
 import com.example.zikra.pertemuan_2.SecondActivity
 import com.example.zikra.pertemuan_3.ThirdActivity
 import com.example.zikra.pertemuan_9.NinthActivity
@@ -125,6 +126,11 @@ class FourthActivity : AppCompatActivity() {
 
         binding.btnPertemuan11.setOnClickListener {
             val intent = Intent(this, elevan::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPertemuan12.setOnClickListener {
+            val intent = Intent(this, Pertemuan12Activity::class.java)
             startActivity(intent)
         }
     }
